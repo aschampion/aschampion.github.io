@@ -133,7 +133,7 @@ task :travis => [:generate] do
   deploy do |repo|
     system "git config user.name '#{ENV['GIT_NAME']}'"
     system "git config user.email '#{ENV['GIT_EMAIL']}'"
-    repo.gsub(/^git/, "https://#{ENV['GH_TOKEN']}")
+    repo.gsub(/^git:\/\//, "https://#{ENV['GH_TOKEN']}@")
   end
 end
 
