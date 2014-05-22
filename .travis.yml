@@ -7,4 +7,4 @@ branches:
 script: bundle exec rake travis
 env:
   global:
-  - secure: "hL1B9hneYCQczIOnv9vSTw/upuvsnO/UyY6kMezPZg7ZM28oCKVtiuKM0a8VPbkMJAIrfFIgh5z4JHRZS6JhzMufQYfRg0fZUqBPHLOfdU8MFNN0WkDTTRXJKFpDrkzKeLvjyqnevJriDGBq95r8QVC+5tXe1YuLcaz64S1qoNs="
+  - secure: "JG7DbjScAPOip2m8M8x7mikHa4SaNZ8mmjRQfvg58J1zLlkr6L+DCZqG5zB9mypBeQ0gvpUOTNBTEJtd3W1vWIV1tPzQqaPYJJGuH4lioZ7RxMNYR5Ja1W/ocP9yEWyuPVdDqowJnws5F0pS1nox89OfVZR5LTXvbWJaZMsMWjk="

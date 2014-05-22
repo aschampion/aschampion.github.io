@@ -99,11 +99,11 @@ def deploy(&block)
 
     keep_deploy_history = true
 
-    system "git init"
+    system "git init --quiet"
     system "git remote add origin #{repo}"
     if keep_deploy_history
-      system "git fetch -q"
-      system "git branch #{deploy_branch} origin/#{deploy_branch}"
+      system "git fetch --quiet"
+      system "git branch #{deploy_branch} origin/#{deploy_branch} --quiet"
     end
     system "git add ."
 
@@ -111,7 +111,7 @@ def deploy(&block)
 
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m #{message.inspect}"
-    system "git push #{repo} #{deploy_branch} --force"
+    system "git push #{repo} #{deploy_branch} --quiet --force"
 
     Dir.chdir pwd
   end
