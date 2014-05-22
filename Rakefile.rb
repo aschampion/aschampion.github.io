@@ -1,6 +1,8 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "tmpdir"
+require "jekyll"
 
 ## -- Config -- ##
 
@@ -71,6 +73,64 @@ task :new_page, :title do |t, args|
     page.puts "  creditlink: "
     page.puts "share: "
     page.puts "---"
+  end
+end
+
+desc "Generate site files"
+task :generate do
+  Jekyll::Site.new(Jekyll.configuration({
+    "source"      => ".",
+    "destination" => "_site"
+  })).process
+end
+
+
+desc "Generate site and publish to GitHub Pages"
+task :publish => [:generate] do
+  repo = %x(git config remote.origin.url).strip
+  deploy_branch = 'gh-pages'
+  if repo.match(/github\.io\.git$/)
+    deploy_branch = 'master'
+  end
+
+  Dir.mktmpdir do |tmp|
+    cp_r "_site/.", tmp
+
+    pwd = Dir.pwd
+    Dir.chdir tmp
+
+    keep_deploy_history = true
+
+    system "git init"
+    system "git remote add origin #{repo}"
+    if keep_deploy_history
+      system "git fetch -q"
+      system "git branch #{deploy_branch} origin/#{deploy_branch}"
+    end
+    system "git add ."
+
+    repo = yield repo if block_given?
+
+    message = "Site updated at #{Time.now.utc}"
+    system "git commit -m #{message.inspect}"
+    system "git push #{repo} #{deploy_branch} --force"
+
+    Dir.chdir pwd
+  end
+end
+
+desc "Generate site and publish to GitHub Pages using Travis CI credentials"
+task :travis => [:generate] do
+  # if this is a pull request, do a simple build of the site and stop
+  if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
+    puts 'Pull request detected. Executing build only.'
+    next
+  end
+
+  Rake::Task["publish"].invoke do |repo|
+    system "git config user.name '#{ENV['GIT_NAME']}'"
+    system "git config user.email '#{ENV['GIT_EMAIL']}'"
+    repo.gsub(/^git:/, "https://#{ENV['GH_TOKEN']}:")
   end
 end
 
