@@ -84,9 +84,7 @@ task :generate do
   })).process
 end
 
-
-desc "Generate site and publish to GitHub Pages"
-task :publish => [:generate] do
+def deploy(&block)
   repo = %x(git config remote.origin.url).strip
   deploy_branch = 'gh-pages'
   if repo.match(/github\.io\.git$/)
@@ -119,6 +117,11 @@ task :publish => [:generate] do
   end
 end
 
+desc "Generate site and publish to GitHub Pages"
+task :publish => [:generate] do
+  deploy
+end
+
 desc "Generate site and publish to GitHub Pages using Travis CI credentials"
 task :travis => [:generate] do
   # if this is a pull request, do a simple build of the site and stop
@@ -127,7 +130,7 @@ task :travis => [:generate] do
     next
   end
 
-  Rake::Task["publish"].invoke do |repo|
+  deploy do |repo|
     system "git config user.name '#{ENV['GIT_NAME']}'"
     system "git config user.email '#{ENV['GIT_EMAIL']}'"
     repo.gsub(/^git/, "https://#{ENV['GH_TOKEN']}")
