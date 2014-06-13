@@ -1,0 +1,9 @@
+---
+layout: page
+---
+
+{{ page.description | markdownify }}
+
+{% if page.website %}
+  <div class="website"><a href="{{ page.website }}">{{ page.website }}</a></div>
+{% endif %}

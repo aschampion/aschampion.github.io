@@ -1,0 +1,29 @@
+---
+layout: page
+title: Portfolio
+image:
+  feature: abstract-8.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+---
+<p>Below are highlights of select research, professional, and graduate studies projects to which I have been a primary contributor.</p>
+{% assign temp = page.projects | group_by:"status" %}
+{% for project_status in temp %}
+  <h2>{{ project_status.name | capitalize }} Projects</h2>
+  <ul class="projects">
+    {% for project in project_status.items %}
+      <li class="project">
+          <a href="/portfolio/{{ project.shortname }}">
+            {% if project.image %}
+              <img src="{{ site.url }}/images/{{ project.image.feature }}" title="{{ project.image.title }}" alt="{{ project.image.alt }}" />
+            {% endif %}
+            <div class="caption">
+              <h3>{{ project.title }}</h3>
+              <p>{{ project.short }}</p>
+              <span class="entry-meta">{{ project.started_on | date: "%B %Y" }} &mdash; {{ project.ended_on | date: "%B %Y" }}</span>
+            </div>
+          </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
