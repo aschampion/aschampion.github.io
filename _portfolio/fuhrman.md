@@ -1,4 +1,5 @@
-layout:    project
+---
+layout:    page
 title:     Automated Fuhrman Grading of Renal Carcinoma
 short: >
   Machine learning grading of histology images, with 
@@ -13,5 +14,5 @@ image:
   feature: abstract-5.jpg
   title:   Automated Fuhrman Grading of Renal Carcinoma
   alt:     Automated Fuhrman Grading of Renal Carcinoma
-description: |
+---
   
