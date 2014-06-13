@@ -5,31 +5,31 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Parallel Molecular Dynamics Simulation &#8211; Andrew Champion</title>
-<meta name="description" content="A distributed memory parallel molecular dynamics simulation of micelle formation.">
+<title>Analysis of Metal Artifact Reduction in Spinal CT &#8211; Andrew Champion</title>
+<meta name="description" content="A statistical analysis of metal artifact reduction algorithms in computed tomography x-rays of spinal implants.">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/pmds-feature.jpg">
+<meta name="twitter:image" content="/images/abstract-11.jpg">
 
-<meta name="twitter:title" content="Parallel Molecular Dynamics Simulation">
-<meta name="twitter:description" content="A distributed memory parallel molecular dynamics simulation of micelle formation.">
+<meta name="twitter:title" content="Analysis of Metal Artifact Reduction in Spinal CT">
+<meta name="twitter:description" content="A statistical analysis of metal artifact reduction algorithms in computed tomography x-rays of spinal implants.">
 <meta name="twitter:creator" content="@aschampion">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Parallel Molecular Dynamics Simulation">
-<meta property="og:description" content="A distributed memory parallel molecular dynamics simulation of micelle formation.">
-<meta property="og:url" content="/portfolio/pmds.html">
+<meta property="og:title" content="Analysis of Metal Artifact Reduction in Spinal CT">
+<meta property="og:description" content="A statistical analysis of metal artifact reduction algorithms in computed tomography x-rays of spinal implants.">
+<meta property="og:url" content="/portfolio/spinalct.html">
 <meta property="og:site_name" content="Andrew Champion">
 
 
 
 
 
-<link rel="canonical" href="/portfolio/pmds.html">
+<link rel="canonical" href="/portfolio/spinalct.html">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andrew Champion Feed">
 
 
@@ -116,9 +116,9 @@
 
 
 <div class="entry-header">
-  
+  <div class="image-credit">Image source: <a href="http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/">dargadgetz</a></div><!-- /.image-credit -->
   <div class="entry-image">
-    <img src="/images/pmds-feature.jpg" alt="Parallel Molecular Dynamics Simulation">
+    <img src="/images/abstract-11.jpg" alt="Analysis of Metal Artifact Reduction in Spinal CT">
   </div><!-- /.entry-image -->
 </div><!-- /.entry-header -->
 
@@ -127,38 +127,26 @@
   <article class="entry">
     <header class="header-title">
       <div class="header-title-wrap">
-        <h1 class="entry-title">Parallel Molecular Dynamics Simulation</h1>
+        <h1 class="entry-title">Analysis of Metal Artifact Reduction in Spinal CT</h1>
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
-      <p>In Spring 2012 I implemented a 2D parallel molecular dynamics simulation for Georgia Tech’s CSE 6730 Modeling &amp; Simulation with a team listed on the <a href="http://github.com/aschampion/gt-cse6730-pmds">GitHub repo</a>. The simulation contains a serial implementation and two distributed memory decompositions in Fortran 90 and OpenMPI. My contributions to the project also include a rudimentary visualizer in Processing and dataset generator in C99.</p>
+      <p>I’m investigating statistical properties of metal artifact reduction in computed tomography x-rays of spinal implants as a scientific programming consultant for Douglas Robertson, M.D. (Emory/Georgia Tech). Details of the project will be available once closer to publication, but my work involves:</p>
 
-<p>By default the project simulates micelle formation by simple hydrophilic and hydrophobic molecules based on the <a href="http://lammps.sandia.gov/doc/Section_example.html">LAMMPS micelle example</a>.</p>
-
-<p>To try it yourself with an MPI-enabled <code>gfortran</code>:</p>
-
-<div class="highlight"><pre><code class="sh">git clone git@github.com:aschampion/gt-cse6730-pmds.git
-<span class="nb">cd </span>gt-cse6730-pmds
-make all
-./pmds <span class="c"># Note that this will take some time and produce a ~200MB dump file</span></code></pre></div>
-
-<p>With the simulation results in <code>out.dump</code>, you can now open the Processing visualization in <code>pmds_visualizer/pmds_visualizer.pde</code>. Note that the visualizer requires the <a href="http://www.sojamo.de/libraries/controlP5/">controlP5</a> Processing library, and the paths in <code>pmds_visualizer/visualizer.properties</code> should resolve to the micelle simulation description file in the repository and <code>out.dump</code> file you generated above.</p>
+<ul>
+  <li>Computer vision and 3D volume segmentation</li>
+  <li>Implementation of morphological operators on the GPU (CUDA) with MATLAB bindings</li>
+  <li>Machine learning for model parameterization</li>
+</ul>
 
 
 <div>
   <a href="/portfolio" class="btn"><i class="icon-arrow-left"></i> Back to Portfolio</a>
   
-    <a href="http://github.com/aschampion/gt-cse6730-pmds" class="btn">
-    
-      <i class="icon-github"></i>
-    
-    Project Website
-    </a>
-  
 </div>
 
 
-<span class="entry-meta">PROJECT ACTIVE March 2012 &mdash; May 2012</span>
+<span class="entry-meta">PROJECT ACTIVE January 2014 &mdash; Present</span>
 
       <footer class="entry-meta">
         
