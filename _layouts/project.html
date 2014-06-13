@@ -2,8 +2,19 @@
 layout: page
 ---
 
-{{ page.description | markdownify }}
+{{ content }}
 
-{% if page.website %}
-  <div class="website"><a href="{{ page.website }}">{{ page.website }}</a></div>
-{% endif %}
+<div>
+  <a href="{{ site.url }}/portfolio" class="btn"><i class="icon-arrow-left"></i> Back to Portfolio</a>
+  {% if page.website %}
+    <a href="{{ page.website }}" class="btn">
+    {% if page.website | remove:'http://' | split:'/' | first == 'github.com' %}
+      <i class="icon-github"></i>
+    {% endif %}
+    Project Website
+    </a>
+  {% endif %}
+</div>
+
+
+<span class="entry-meta">PROJECT ACTIVE {{ page.started_on | date: "%B %Y" }} &mdash; {{ page.ended_on | date: "%B %Y" }}</span>
