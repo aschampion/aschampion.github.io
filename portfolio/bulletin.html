@@ -5,31 +5,34 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Parallel Molecular Dynamics Simulation &#8211; Andrew Champion</title>
-<meta name="description" content="A distributed memory parallel molecular dynamics simulation of micelle formation.">
+<title>Large Touchscreen Digital Bulletin Board &#8211; Andrew Champion</title>
+<meta name="description" content="Digital bulletin board for a custom, 102-inch multitouch display at the Georgia Gwinnett College Student Center. Included both a touchscreen UI with paper simulation and a web application for bulletin content creation.
+">
 
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="/images/pmds-feature.jpg">
+<meta name="twitter:image" content="/images/bulletin-feature.jpg">
 
-<meta name="twitter:title" content="Parallel Molecular Dynamics Simulation">
-<meta name="twitter:description" content="A distributed memory parallel molecular dynamics simulation of micelle formation.">
+<meta name="twitter:title" content="Large Touchscreen Digital Bulletin Board">
+<meta name="twitter:description" content="Digital bulletin board for a custom, 102-inch multitouch display at the Georgia Gwinnett College Student Center. Included both a touchscreen UI with paper simulation and a web application for bulletin content creation.
+">
 <meta name="twitter:creator" content="@aschampion">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Parallel Molecular Dynamics Simulation">
-<meta property="og:description" content="A distributed memory parallel molecular dynamics simulation of micelle formation.">
-<meta property="og:url" content="/portfolio/pmds.html">
+<meta property="og:title" content="Large Touchscreen Digital Bulletin Board">
+<meta property="og:description" content="Digital bulletin board for a custom, 102-inch multitouch display at the Georgia Gwinnett College Student Center. Included both a touchscreen UI with paper simulation and a web application for bulletin content creation.
+">
+<meta property="og:url" content="/portfolio/bulletin.html">
 <meta property="og:site_name" content="Andrew Champion">
 
 
 
 
 
-<link rel="canonical" href="/portfolio/pmds.html">
+<link rel="canonical" href="/portfolio/bulletin.html">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Andrew Champion Feed">
 
 
@@ -118,7 +121,7 @@
 <div class="entry-header">
   
   <div class="entry-image">
-    <img src="/images/pmds-feature.jpg" alt="Parallel Molecular Dynamics Simulation">
+    <img src="/images/bulletin-feature.jpg" alt="Large Touchscreen Digital Bulletin Board">
   </div><!-- /.entry-image -->
 </div><!-- /.entry-header -->
 
@@ -127,31 +130,29 @@
   <article class="entry">
     <header class="header-title">
       <div class="header-title-wrap">
-        <h1 class="entry-title">Parallel Molecular Dynamics Simulation</h1>
+        <h1 class="entry-title">Large Touchscreen Digital Bulletin Board</h1>
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
-      <p>In Spring 2012 I implemented a 2D parallel molecular dynamics simulation for Georgia Tech’s CSE 6730 Modeling &amp; Simulation with a team listed on the <a href="http://github.com/aschampion/gt-cse6730-pmds">GitHub repo</a>. The simulation contains a serial implementation and two distributed memory decompositions in Fortran 90 and OpenMPI. My contributions to the project also include a rudimentary visualizer in Processing and dataset generator in C99.</p>
+      <p>When Georgia Gwinnett College built their Student Center in 2010, the central walkway was lined with six 40” screens for digital signage and one 102” multitouch screen for student interaction. As an application developer in the school’s Department of Technology Development, I created a touch-based interface (in Processing/OpenGL) for viewing and interacting with digital bulletins on the large display. </p>
 
-<p>By default the project simulates micelle formation by simple hydrophilic and hydrophobic molecules based on the <a href="http://lammps.sandia.gov/doc/Section_example.html">LAMMPS micelle example</a>.</p>
+<p class="pull-right"><img src="/images/bulletin-full.jpg" alt="Board Image" /></p>
 
-<p>To try it yourself with an MPI-enabled <code>gfortran</code>:</p>
+<h3 id="interface">Interface</h3>
+<p>Following the skeuomorphic vision for the board, poster bulletins animate like paper in a virtual wind simulated with verlet integration and responsive to gaze-detection cues from an attached camera to grab the attention of passing students (though this feature was not deployed at the installation). More modern interaction contexts allow students to select bulletins that interest them and sign up for email or social media alerts by swiping their student card (also not deployed at installation) or scanning a QR code with their mobile device.</p>
 
-<div class="highlight"><pre><code class="sh">git clone git@github.com:aschampion/gt-cse6730-pmds.git
-<span class="nb">cd </span>gt-cse6730-pmds
-make all
-./pmds <span class="c"># Note that this will take some time and produce a ~200MB dump file</span></code></pre></div>
+<h3 id="layout-and-analytics">Layout and Analytics</h3>
+<p>To generate poster layouts for the display I implemented a genetic algorithm (in C++) to provide more recent posters or upcoming events with the largest amount of screen space, while still layering older or longer lasting posters in the background with a high likelihood for significant screenspace during any given day. Analytics tracked layouts and interactions to provide feedback to poster creators on the effictiveness of their designs and to inform the positioning algorithm on term weighting in its objective function most effective at initiating interaction.</p>
 
-<p>With the simulation results in <code>out.dump</code>, you can now open the Processing visualization in <code>pmds_visualizer/pmds_visualizer.pde</code>. Note that the visualizer requires the <a href="http://www.sojamo.de/libraries/controlP5/">controlP5</a> Processing library, and the paths in <code>pmds_visualizer/visualizer.properties</code> should resolve to the micelle simulation description file in the repository and <code>out.dump</code> file you generated above.</p>
+<h3 id="backend">Backend</h3>
+<p>Driving this content is a <a href="http://hercules.ggc.edu/bulletin">bulletin management webapplication</a> (in JRuby/Rails) I created to allow bulletin upload, interactive creation (via a Flash application created by a colleague), and monitoring by content creators, and bulletin approval workflow, revision, and analytics auditing by school staff. The webapp also feeds bulletin content to other school signage systems and online portals, as well as automating the creation and moderation of mailing lists (Python/Mailman) where students can receive information and updates from bulletin creators and event coordinators after signing up via the display.</p>
 
 
 <div>
   <a href="/portfolio" class="btn"><i class="icon-arrow-left"></i> Back to Portfolio</a>
   
-    <a href="http://github.com/aschampion/gt-cse6730-pmds" class="btn">
+    <a href="http://hercules.ggc.edu/bulletin" class="btn">
     
-    
-      <i class="icon-github"></i>
     
     Project Website
     </a>
@@ -159,7 +160,7 @@ make all
 </div>
 
 
-<span class="entry-meta">PROJECT ACTIVE March 2012 &mdash; May 2012</span>
+<span class="entry-meta">PROJECT ACTIVE November 2010 &mdash; September 2011</span>
 
       <footer class="entry-meta">
         
