@@ -9,7 +9,7 @@ published: false
 ---
 <p>Below are highlights of select research, professional, and graduate studies projects to which I have been a primary contributor.</p>
 
-{% assign temp = site.portfolio | where:"published",true | group_by:"status" %}
+{% assign temp = site.portfolio | where:"published",true | group_by:"status" | sort:"name" %}
 
 <div>
 {% for project_status in temp %}
@@ -24,7 +24,9 @@ published: false
       <li class="project">
           <a href="{{ project.url }}">
             {% if project.image %}
-              <img src="{{ site.url }}/images/{{ project.image.feature }}" title="{{ project.image.title }}" alt="{{ project.image.alt }}" />
+              <div class="img-container">
+                <img src="{{ site.url }}/images/{{ project.image.feature }}" title="{{ project.image.title }}" alt="{{ project.image.alt }}" />
+              </div>
             {% endif %}
             <div class="caption">
               <h3>{{ project.title }}</h3>

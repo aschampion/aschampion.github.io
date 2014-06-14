@@ -4387,12 +4387,16 @@ ul.projects li {
   margin-bottom: 20px;
 }
 
-ul.projects li img {
+ul.projects li .img-container {
   position: absolute;
   top: 0;
   width: 100%;
   max-height: 220px;
   overflow: hidden;
+}
+
+ul.projects li .img-container img {
+  width: 100%;
 }
 
 ul.projects li a {

@@ -8,7 +8,8 @@ layout: page
   <a href="{{ site.url }}/portfolio" class="btn"><i class="icon-arrow-left"></i> Back to Portfolio</a>
   {% if page.website %}
     <a href="{{ page.website }}" class="btn">
-    {% if page.website | remove:'http://' | split:'/' | first == 'github.com' %}
+    {% capture website_base_url %}{{ page.website | remove:'http://' | split:'/' | first }}{% endcapture %}
+    {% if website_base_url == 'github.com' %}
       <i class="icon-github"></i>
     {% endif %}
     Project Website

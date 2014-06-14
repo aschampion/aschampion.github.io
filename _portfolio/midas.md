@@ -12,10 +12,10 @@ image:
   title:   Virtual Reality Interface Device
   alt:     Virtual Reality Interface Device
 ---
-Since first wearing an Oculus in a visualization lab at Georgia Tech I've been fascinated with the new visualization and interaction affordances VR can create for data and model exploration. While a public prototype isn't ready to be revealed, the project involves:
+Since first wearing the Oculus Rift in a lab at Georgia Tech I've been fascinated with the novel visualizations and interactions VR affords for data and model exploration. While a public prototype isn't ready to be revealed, the project involves:
 
 * Arduino (C++ & Processing for hardware monitoring)
-* Sensor fusion, including IMU, computer vision (OpenCV), and custom sensors
+* Sensor fusion, including inertial, computer vision (OpenCV), and custom sensors
 * Closed-loop actuator control adaptive to individual users and interactions
 * Rapid hardware iteration with 3D filament printing
   

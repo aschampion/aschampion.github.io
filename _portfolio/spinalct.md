@@ -15,6 +15,6 @@ image:
 ---
 I'm investigating statistical properties of metal artifact reduction in computed tomography x-rays of spinal implants as a scientific programming consultant for Douglas Robertson, M.D. (Emory/Georgia Tech). Details of the project will be available once closer to publication, but my work involves:
 
-* Computer vision and 3D volume segmentation
+* Computer vision and 3D segmentation of CT volumes
 * Implementation of morphological operators on the GPU (CUDA) with MATLAB bindings
 * Machine learning for model parameterization
