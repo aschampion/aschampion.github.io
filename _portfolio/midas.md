@@ -4,7 +4,7 @@ title:     Virtual Reality Interface Device
 description: >
   An as-yet unannounced virtual reality haptic interface device, still in early prototyping as a personal project with private funding.
 published: true
-status:    active
+status:    current
 started_on: 2014-04-01
 ended_on:   Present
 image:
@@ -12,7 +12,7 @@ image:
   title:   Virtual Reality Interface Device
   alt:     Virtual Reality Interface Device
 ---
-Since first wearing the Oculus Rift in a lab at Georgia Tech I've been fascinated with the novel visualizations and interactions VR affords for data and model exploration. While a public prototype isn't ready to be revealed, the project involves:
+Since first wearing the Oculus Rift in a lab at Georgia Tech I've been fascinated with the novel visualizations and interactions VR affords for data and model exploration. I'm prototyping a device exploring if what makes the rift successful as a display &mdash; latency below a sensory-feedback critical barrier made affordable by commodity hardware &mdash; can be also be achieved for intuitive haptic interaction. While a public prototype isn't ready to be revealed, the project involves:
 
 * Arduino (C++ & Processing for hardware monitoring)
 * Sensor fusion, including inertial, computer vision (OpenCV), and custom sensors

@@ -11,6 +11,8 @@ layout: page
     {% capture website_base_url %}{{ page.website | remove:'http://' | split:'/' | first }}{% endcapture %}
     {% if website_base_url == 'github.com' %}
       <i class="icon-github"></i>
+    {% else %}
+      <i class="icon-external-link"></i>
     {% endif %}
     Project Website
     </a>

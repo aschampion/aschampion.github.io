@@ -15,6 +15,7 @@ published: false
 {% for project_status in temp %}
   <a href="#{{ project_status.name }}-projects" class="btn">{{ project_status.name | capitalize }} Projects</a>
 {% endfor %}
+  <a href="#publications" class="btn"><i class="icon-book"></i> Publications</a>
 </div>
 
 {% for project_status in temp %}
@@ -38,3 +39,7 @@ published: false
     {% endfor %}
   </ul>
 {% endfor %}
+
+<a name="publications"><h2>Publications</h2></a>
+
+{% bibliography %}

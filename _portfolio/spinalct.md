@@ -3,7 +3,7 @@ layout:    project
 title:     Analysis of Metal Artifact Reduction in Spinal CT
 description:     A statistical analysis of metal artifact reduction algorithms in computed tomography x-rays of spinal implants.
 published: true
-status:    active
+status:    current
 started_on: 2014-01-01
 ended_on:   Present
 image:

@@ -7,7 +7,7 @@ description: >
   the goal of narrowing the gap between computer decision support systems 
   and pathologists' domain expertise. Published in IEEE EMBC 2014.
 published: true
-status:    active
+status:    current
 started_on: 2013-03-01
 ended_on:   Present
 image:
