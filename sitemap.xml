@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc></loc>
+        <loc>http://aschampion.github.io</loc>
     </url>
     
     
     <url>
-        <loc>/404.html</loc>
+        <loc>http://aschampion.github.io/404.html</loc>
     </url>
     
     <url>
-        <loc>/about/</loc>
+        <loc>http://aschampion.github.io/about/</loc>
     </url>
     
     <url>
-        <loc>/feed.xml</loc>
+        <loc>http://aschampion.github.io/feed.xml</loc>
     </url>
     
     <url>
-        <loc>/index.html</loc>
+        <loc>http://aschampion.github.io/index.html</loc>
     </url>
     
     <url>
-        <loc>/posts/</loc>
+        <loc>http://aschampion.github.io/posts/</loc>
     </url>
     
     <url>
-        <loc>/sitemap.xml</loc>
+        <loc>http://aschampion.github.io/sitemap.xml</loc>
     </url>
     
     <url>
-        <loc>/tags/</loc>
+        <loc>http://aschampion.github.io/tags/</loc>
     </url>
     
 
