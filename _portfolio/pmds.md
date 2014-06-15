@@ -16,6 +16,13 @@ In Spring 2012 I implemented a 2D parallel molecular dynamics simulation for Geo
 
 By default the project simulates micelle formation by simple hydrophilic and hydrophobic molecules based on the [LAMMPS micelle example](http://lammps.sandia.gov/doc/Section_example.html).
 
+<figure>
+	<iframe name='quickcast' src='http://quick.as/embed/bzorulen' scrolling='no' frameborder='0' width='100%' allowfullscreen></iframe><script src='http://quick.as/embed/script/1.37'></script>
+	<figcaption>Visualization of early stage of micelle formation. Note that the video is recorded at a lower framerate than the visualization, causing smooth particle movement to be aliased.</figcaption>
+</figure>
+
+The yellow particles represent water-based solution, the green particles hydrophilic lipid heads, and the blue and purple particles hydrophobic lipid tails.
+
 To try it yourself with an MPI-enabled `gfortran`:
 
 {% highlight sh %}
