@@ -133,7 +133,7 @@
     <div class="entry-content">
       <p>In Spring 2012 I implemented a 2D parallel molecular dynamics simulation for Georgia Tech’s CSE 6730 Modeling &amp; Simulation with a team listed on the <a href="http://github.com/aschampion/gt-cse6730-pmds">GitHub repo</a>. The simulation contains a serial implementation and two distributed memory decompositions in Fortran 90 and OpenMPI. My contributions to the project also include a rudimentary visualizer in Processing and dataset generator in C99.</p>
 
-<p>By default the project simulates micelle formation by simple hydrophilic and hydrophobic molecules based on the <a href="http://lammps.sandia.gov/doc/Section_example.html">LAMMPS micelle example</a>.</p>
+<p>By default the project simulates micelle formation by simple hydrophilic and hydrophobic molecules based on the <a href="http://lammps.sandia.gov/doc/Section_example.html">LAMMPS micelle example</a>. Details of the simulation and an analysis of strong- and weak-scaling properties of the serial version and two MPI decompositions are available in the <a href="http://rawgit.com/aschampion/gt-cse6730-pmds/master/doc/report.pdf">original project report</a>.</p>
 
 <figure>
 	<iframe name="quickcast" src="http://quick.as/embed/bzorulen" scrolling="no" frameborder="0" width="100%" allowfullscreen=""></iframe><script src="http://quick.as/embed/script/1.37"></script>
@@ -147,9 +147,9 @@
 <div class="highlight"><pre><code class="sh">git clone git@github.com:aschampion/gt-cse6730-pmds.git
 <span class="nb">cd </span>gt-cse6730-pmds
 make all
-./pmds <span class="c"># Note that this will take some time and produce a ~200MB dump file</span></code></pre></div>
+./pmds in.micelle <span class="c"># Note that this will take some time and produce a ~200MB dump file</span></code></pre></div>
 
-<p>With the simulation results in <code>out.dump</code>, you can now open the Processing visualization in <code>pmds_visualizer/pmds_visualizer.pde</code>. Note that the visualizer requires the <a href="http://www.sojamo.de/libraries/controlP5/">controlP5</a> Processing library, and the paths in <code>pmds_visualizer/visualizer.properties</code> should resolve to the micelle simulation description file in the repository and <code>out.dump</code> file you generated above.</p>
+<p>With the simulation results in <code>out.dump</code>, you can now open the <a href="http://www.processing.org/">Processing</a> visualization in <code>pmds_visualizer/pmds_visualizer.pde</code> (tested with 2.0b8). Note that the visualizer requires the <a href="http://www.sojamo.de/libraries/controlP5/">controlP5</a> Processing library (tested with 2.0.4), and the paths in <code>pmds_visualizer/visualizer.properties</code> should resolve to the <code>data.micelle</code> file in the repository and <code>out.dump</code> and <code>out.dump.fmt</code> files you generated above.</p>
 
 
 <div>

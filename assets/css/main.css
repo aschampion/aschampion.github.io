@@ -4438,3 +4438,7 @@ ul.projects li .caption span.entry-meta {
   margin-left: 0 !important;
   color: #555;
 }
+
+#github-feed .itemTitle {
+  display: none;
+}
