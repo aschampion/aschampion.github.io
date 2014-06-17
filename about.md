@@ -9,25 +9,13 @@ image:
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 share: true
 custom-scripts: |
-  <script src="//rawgithub.com/christianv/jquery-lifestream/master/jquery.lifestream.min.js"></script>
+  <script src="//rawgit.com/enginkizil/FeedEk/master/js/FeedEk.js"></script>
   <script>
-    $("#lifestream-gh").lifestream({
-      list:[
-        {
-          service: "github",
-          user: "aschampion"
-        }
-      ],
-      limit: 5
-    });
-    $("#lifestream-tw").lifestream({
-      list:[
-        {
-          service: "twitter",
-          user: "aschampion"
-        }
-      ],
-      limit: 5
+    $("#github-feed").FeedEk({
+      FeedUrl : 'http://github.com/aschampion.atom',
+      MaxCount : 5,
+      ShowDesc : true,
+      ShowPubDate: false
     });
   </script>
 ---
@@ -38,8 +26,11 @@ If that seems eccletic, [my portfolio]({{ site.url }}/portfolio) provides some c
 
 ##<a href="http://github.com/{{ site.owner.github }}"><i class="icon-github"></i> Recent GitHub activity</a>
 
-<div id="lifestream-gh">&nbsp;</div>
+<div id="github-feed">&nbsp;</div>
 
 ##<a href="http://twitter.com/{{ site.owner.twitter }}"><i class="icon-twitter"></i> Recent Twitter activity</a>
 
-<div id="lifestream-tw">&nbsp;</div>
+<div id="twitter-feed">
+  <a class="twitter-timeline" href="https://twitter.com/aschampion" data-widget-id="478994917268545536">Tweets by @aschampion</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
