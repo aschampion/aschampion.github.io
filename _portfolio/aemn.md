@@ -12,7 +12,7 @@ image:
   title: Wind Speed Prediction
   alt:   Correlation map image
 ---
-As a graduate research assistant at the University of Georgia I developed machine learning-based predictive models of wind speed from multiple, multivariate climatological data time series for the [Georgia Automated Environmental Monitoring Network (AEMN)](http://www.weather.uga.edu/). A sampling of learning algorithms from regression trees, supper vector regression, Bayesian processes, and lazy learners were applied to both inter- and intra-location prediction tasks {% cite knox2012usingposter %}. The primary findings of my work were that Bayesian regression ensembles produced higher accuracy models than other best-in-class learners and biased resampling of the data demonstrated performance differences were primarily due to the highly kurtotic, skewed distribution of wind speed.
+As a graduate research assistant at the University of Georgia I developed machine learning-based predictive models of wind speed from multiple, multivariate climatological data time series for the [Georgia Automated Environmental Monitoring Network (AEMN)](http://www.weather.uga.edu/). A sampling of learning algorithms from regression trees, support vector regression, Bayesian processes, and lazy learners were applied to both inter- and intra-location prediction tasks {% cite knox2012usingposter %}. The primary findings of my work were that Bayesian regression ensembles produced higher accuracy models than other best-in-class learners. Biased resampling of the data demonstrated performance differences were primarily due to the highly kurtotic, skewed distribution of wind speed.
 
 References
 ----------
