@@ -3,7 +3,7 @@ layout:    project
 title:     Parallel Molecular Dynamics Simulation
 description:     A distributed memory parallel molecular dynamics simulation of micelle formation.
 published: true
-status:    featured
+status:    past
 website:   http://github.com/aschampion/gt-cse6730-pmds
 started_on: 2012-03-01
 ended_on:   2012-05-01
