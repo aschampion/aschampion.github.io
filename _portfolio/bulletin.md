@@ -15,8 +15,9 @@ image:
 ---
 When Georgia Gwinnett College built their Student Center in 2010, the central walkway was lined with six 40" screens for digital signage and one 102" multitouch screen for student interaction. As an application developer in the school's Department of Technology Development, I created a touch-based interface (in Processing/OpenGL) for viewing and interacting with digital bulletins on the large display. 
 
-![Board Image]({{ site.url }}/images/bulletin-full.jpg)
-{: .pull-right}
+<figure>
+	<img src="{{ site.url }}/images/bulletin-full.jpg" alt="Board Image" class=".pull-right" />
+</figure>
 
 ### Interface
 Following the skeuomorphic vision for the board, poster bulletins animate like paper in a virtual wind simulated with verlet integration and responsive to gaze-detection cues from an attached camera to grab the attention of passing students (though this feature was not deployed at the installation). More modern interaction contexts allow students to select bulletins that interest them and sign up for email or social media alerts by swiping their student card (also not deployed at installation) or scanning a QR code with their mobile device.
